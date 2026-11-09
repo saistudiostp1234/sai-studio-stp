@@ -1,0 +1,589 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SRI SAI STUDIO | Photography & Designing</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080808;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* HEADER */
+header {
+    background: #050505;
+    padding: 18px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #b88a35;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.brand {
+    color: #e5bd68;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.brand span {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 9px;
+    letter-spacing: 4px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #e5bd68;
+}
+
+/* HERO */
+.hero {
+    min-height: 570px;
+    display: flex;
+    align-items: center;
+    padding: 70px 10%;
+    background:
+        radial-gradient(ellipse at 80% 40%, #493417 0%, transparent 35%),
+        radial-gradient(ellipse at 20% 90%, #30200e 0%, transparent 35%),
+        linear-gradient(120deg, #050505, #17110a, #050505);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: "✦";
+    position: absolute;
+    right: 12%;
+    top: 20%;
+    font-size: 180px;
+    color: rgba(229,189,104,0.08);
+}
+
+.hero-content {
+    max-width: 700px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content .small {
+    color: #e5bd68;
+    letter-spacing: 4px;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 75px;
+    line-height: 1;
+    color: #e5bd68;
+    margin-bottom: 22px;
+}
+
+.hero h1 span {
+    display: block;
+    color: white;
+    font-style: italic;
+}
+
+.hero-content h3 {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-bottom: 35px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 25px;
+    border: 1px solid #d8ad55;
+    color: #e5bd68;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #d8ad55;
+    color: black;
+}
+
+/* DECORATIVE LINE */
+.gold-line {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #d8ad55, transparent);
+}
+
+/* ABOUT */
+.about {
+    padding: 75px 8%;
+    text-align: center;
+    background: #0d0d0d;
+}
+
+.small-heading {
+    color: #d8ad55;
+    letter-spacing: 4px;
+    font-size: 12px;
+}
+
+.about h2,
+.section-heading h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    color: #e5bd68;
+    margin: 15px 0;
+}
+
+.about p.description {
+    max-width: 750px;
+    margin: auto;
+    line-height: 1.9;
+    color: #ccc;
+}
+
+/* SERVICES */
+.services {
+    padding: 75px 6%;
+    text-align: center;
+    background:
+        radial-gradient(ellipse at center, #21180d, #080808 70%);
+}
+
+.section-heading h2 {
+    margin-bottom: 35px;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+}
+
+.service {
+    border: 1px solid #765b2c;
+    padding: 35px 12px;
+    background: linear-gradient(145deg, #18130c, #080808);
+    transition: 0.3s;
+}
+
+.service:hover {
+    transform: translateY(-8px);
+    border-color: #e5bd68;
+    box-shadow: 0 5px 25px rgba(229,189,104,0.12);
+}
+
+.symbol {
+    color: #e5bd68;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.service h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 23px;
+    font-weight: 500;
+}
+
+/* PORTFOLIO */
+#portfolio {
+    padding: 75px 8%;
+    text-align: center;
+    background: #0b0b0b;
+}
+
+.portfolio-box {
+    border: 1px solid #765b2c;
+    background: linear-gradient(135deg, #21180d, #080808);
+    padding: 55px 20px;
+    margin-top: 25px;
+}
+
+.portfolio-box .star {
+    color: #e5bd68;
+    font-size: 45px;
+}
+
+.portfolio-box h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 34px;
+    color: #e5bd68;
+    margin: 15px 0;
+}
+
+.portfolio-box p {
+    color: #ccc;
+    line-height: 1.8;
+}
+
+/* CONTACT */
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    padding: 75px 8%;
+    background: #080808;
+}
+
+.contact h2 {
+    font-family: 'Cormorant Garamond', serif;
+    color: #e5bd68;
+    font-size: 43px;
+    margin: 15px 0 25px;
+}
+
+.contact p {
+    margin: 15px 0;
+    line-height: 1.7;
+    color: #ddd;
+}
+
+.contact a {
+    color: #e5bd68;
+}
+
+.contact-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.contact-buttons a {
+    background: #d8ad55;
+    color: black;
+    padding: 12px 18px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.contact-buttons a:hover {
+    background: white;
+}
+
+/* MAP */
+.map iframe {
+    width: 100%;
+    height: 300px;
+    border: 1px solid #b88a35;
+    margin-top: 15px;
+}
+
+.directions {
+    display: inline-block;
+    margin-top: 15px;
+    border: 1px solid #d8ad55;
+    padding: 12px 22px;
+}
+
+/* FOOTER */
+footer {
+    padding: 25px;
+    text-align: center;
+    border-top: 1px solid #765b2c;
+    color: #e5bd68;
+    font-size: 13px;
+}
+
+footer p {
+    margin-top: 8px;
+    color: #aaa;
+}
+
+/* MOBILE */
+@media(max-width: 800px) {
+
+    header {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        min-height: 450px;
+        padding: 50px 7%;
+    }
+
+    .hero h1 {
+        font-size: 49px;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact {
+        grid-template-columns: 1fr;
+    }
+
+    .about h2,
+    .section-heading h2 {
+        font-size: 38px;
+    }
+}
+
+@media(max-width: 400px) {
+    .brand {
+        font-size: 23px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+
+    <div class="brand">
+        SRI SAI STUDIO
+        <span>CAPTURE • CREATE • CHERISH</span>
+    </div>
+
+    <nav>
+        <a href="#home">HOME</a>
+        <a href="#about">ABOUT</a>
+        <a href="#services">SERVICES</a>
+        <a href="#portfolio">PORTFOLIO</a>
+        <a href="#contact">CONTACT</a>
+    </nav>
+
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <p class="small">WEDDING PHOTOGRAPHY & FILMS</p>
+
+        <h1>
+            Every Moment
+            <span>Has A Story.</span>
+        </h1>
+
+        <h3>
+            WE CAPTURE YOUR BEAUTIFUL MEMORIES FOREVER.
+        </h3>
+
+        <a href="#services" class="btn">
+            EXPLORE OUR SERVICES →
+        </a>
+
+    </div>
+
+</section>
+
+<div class="gold-line"></div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+
+    <p class="small-heading">WELCOME TO OUR STUDIO</p>
+
+    <h2>Creating Memories That Last Forever</h2>
+
+    <p class="description">
+        Welcome to SRI SAI STUDIO, where every photograph
+        tells a beautiful story. We believe every celebration
+        deserves to be remembered with creativity, passion
+        and perfection. Our goal is to turn your special
+        moments into memories that last forever.
+    </p>
+
+</section>
+
+<div class="gold-line"></div>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+
+    <p class="small-heading">WHAT WE DO</p>
+
+    <div class="section-heading">
+        <h2>Our Services</h2>
+    </div>
+
+    <div class="service-grid">
+
+        <div class="service">
+            <div class="symbol">📷</div>
+            <h3>Wedding Photography</h3>
+        </div>
+
+        <div class="service">
+            <div class="symbol">🎬</div>
+            <h3>Cinematography</h3>
+        </div>
+
+        <div class="service">
+            <div class="symbol">✏️</div>
+            <h3>Photo Editing</h3>
+        </div>
+
+        <div class="service">
+            <div class="symbol">▶</div>
+            <h3>Video Editing</h3>
+        </div>
+
+        <div class="service">
+            <div class="symbol">📖</div>
+            <h3>Album Designing</h3>
+        </div>
+
+    </div>
+
+</section>
+
+<div class="gold-line"></div>
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
+
+    <p class="small-heading">OUR CREATIVE WORK</p>
+
+    <div class="section-heading">
+        <h2>Our Portfolio</h2>
+    </div>
+
+    <div class="portfolio-box">
+
+        <div class="star">✦</div>
+
+        <h3>Every Picture Tells A Story</h3>
+
+        <p>
+            Beautiful celebrations. Precious memories.
+            Creative photography and designing.
+            Your special moments deserve the best.
+        </p>
+
+    </div>
+
+</section>
+
+<div class="gold-line"></div>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+    <div>
+
+        <p class="small-heading">GET IN TOUCH</p>
+
+        <h2>Let's Create Memories</h2>
+
+        <p>OWNER: Girendra Pratap Verma</p>
+
+        <p>STUDIO: SAI MIXING & DESIGNING LAB</p>
+
+        <p>
+            ADDRESS: Chungi Chauraha, Sitapur,
+            Near Petrol Pump
+        </p>
+
+        <p>
+            PHONE:
+            <a href="tel:9151669591">9151669591</a>
+        </p>
+
+        <div class="contact-buttons">
+
+            <a href="tel:9151669591">
+                CALL OUR STUDIO
+            </a>
+
+            <a href="https://wa.me/919151669591" target="_blank">
+                WHATSAPP US
+            </a>
+
+        </div>
+
+        <p style="margin-top:25px;">
+            INSTAGRAM:
+            <a href="https://www.instagram.com/girendra_verma_team_145/"
+               target="_blank">
+                @girendra_verma_team_145
+            </a>
+        </p>
+
+    </div>
+
+    <!-- MAP -->
+    <div class="map">
+
+        <p class="small-heading">FIND OUR STUDIO</p>
+
+        <h2>Our Location</h2>
+
+        <iframe
+            src="https://maps.google.com/maps?q=Chungi%20Chauraha%20Sitapur%20Uttar%20Pradesh&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            loading="lazy">
+        </iframe>
+
+        <a class="directions"
+           href="https://www.google.com/maps/search/?api=1&query=Chungi+Chauraha+Sitapur+near+petrol+pump"
+           target="_blank">
+            GET DIRECTIONS →
+        </a>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+    © 2026 SRI SAI STUDIO | ALL RIGHTS RESERVED
+
+    <p>Made with creativity and passion.</p>
+
+</footer>
+
+</body>
+</html>
